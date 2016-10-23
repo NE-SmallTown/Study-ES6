@@ -13,3 +13,5 @@
  * 使用npm update <package> -g可以把全局安装的对应命令行程序更新至最新版。
  * 使用npm cache clear可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人。
  * 使用npm unpublish <package>@<version>可以撤销发布自己发布过的某个版本代码。
+ 
+ 
