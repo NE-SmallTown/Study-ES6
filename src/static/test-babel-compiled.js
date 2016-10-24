@@ -115,6 +115,6 @@ function f1(_ref5) {
     var y = _ref6[1];
     var z = _ref6[2];
 }
-f1([1, 2, 3]);
+f1([1, 2, 3]); //
 
 //# sourceMappingURL=test-babel-compiled.js.map
