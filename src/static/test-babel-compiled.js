@@ -2,7 +2,43 @@
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
+var asyncFunc = function () {
+    var _ref8 = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
+        var f1, f2;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+                switch (_context.prev = _context.next) {
+                    case 0:
+                        _context.next = 2;
+                        return func1('/etc/fstab');
+
+                    case 2:
+                        f1 = _context.sent;
+                        _context.next = 5;
+                        return func1('/etc/shells');
+
+                    case 5:
+                        f2 = _context.sent;
+
+                        console.log(f1.toString());
+                        console.log(f2.toString());
+
+                    case 8:
+                    case 'end':
+                        return _context.stop();
+                }
+            }
+        }, _callee, this);
+    }));
+
+    return function asyncFunc() {
+        return _ref8.apply(this, arguments);
+    };
+}();
+
 require('babel-polyfill');
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 // 调用babel test-babel.js --presets es2015，即可转为ES5代码
 [1, 2, 3].map(function (x) {
@@ -116,5 +152,62 @@ function f1(_ref5) {
     var z = _ref6[2];
 }
 f1([1, 2, 3]); //
+
+function fetch(url) {
+    var _ref7 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { q: 22 };
+
+    var _ref7$method = _ref7.method;
+    var method = _ref7$method === undefined ? 'GET' : _ref7$method;
+
+    console.log(method);
+}
+
+fetch('http://example.com');
+
+(function () {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 5;
+}).length; // 0
+
+(function () {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+    }
+
+    args;
+}).length; // 0
+
+(function () {
+    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var b = arguments[1];
+    var c = arguments[2];
+}).length; // 0
+
+(function (a) {
+    var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var c = arguments[2];
+}).length; // 1
+
+var fff = 1;
+
+function foo() {
+    // ...
+
+    var fff = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : fff;
+}
+
+foo(); // ReferenceError: x is not defined
+
+
+function func1(y) {
+    var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+
+    var a1, b1;
+
+    var p = void 0;
+}
+
+var s1 = Symbol.for('foo');
+
+;
 
 //# sourceMappingURL=test-babel-compiled.js.map

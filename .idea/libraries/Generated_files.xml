@@ -2,13 +2,23 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/src/static/moduleC-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/static/moduleB-compiled.js" />
         <item url="file://$PROJECT_DIR$/src/static/test-babel-compiled.js" />
+        <item url="file://$PROJECT_DIR$/src/static/moduleA-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/static/bb-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/static/bb-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/first-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/second-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/moduleQ-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/moduleQ-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/moduleC-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/moduleB-compiled.js" />
       <root url="file://$PROJECT_DIR$/src/static/test-babel-compiled.js" />
+      <root url="file://$PROJECT_DIR$/src/static/moduleA-compiled.js" />
     </CLASSES>
     <SOURCES />
   </library>

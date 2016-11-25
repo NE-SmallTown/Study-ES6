@@ -70,18 +70,45 @@ let x1 = 1, y1 = 2;
 function f1([x, y, z]) {}
 f1([1, 2, 3]);//
 
+function fetch(url, { method = 'GET' } = {q: 22}) {
+    console.log(method);
+}
+
+fetch('http://example.com');
+
+(function (a = 5) {}).length; // 0
+
+(function(...args) {args;}).length; // 0
+
+(function (a = 0, b, c) {}).length; // 0
+
+(function (a, b = 1, c) {}).length; // 1
+
+var fff = 1;
+
+function foo(fff = fff) {
+    // ...
+}
+
+foo() // ReferenceError: x is not defined
 
 
 
 
+function func1(y, x = 2, ...pp){
+    var a1, b1;
 
+    let p;
+}
 
+var s1 = Symbol.for('foo');
 
-
-
-
-
-
+async function asyncFunc(){
+    var f1 = await func1('/etc/fstab');
+    var f2 = await func1('/etc/shells');
+    console.log(f1.toString());
+    console.log(f2.toString());
+};
 
 
 

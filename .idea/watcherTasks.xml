@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="--source-maps --out-file $FileNameWithoutExtension$-compiled.js --presets es2015 $FilePath$" />
+      <option name="arguments" value="$FilePath$ --out-file $FileNameWithoutExtension$-compiled.js --source-maps" />
       <option name="checkSyntaxErrors" value="true" />
-      <option name="description" value="Transpiles ECMAScript 6 code to ECMAScript 5" />
+      <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="js" />
       <option name="immediateSync" value="true" />
@@ -14,7 +14,7 @@
         <array />
       </option>
       <option name="outputFromStdout" value="false" />
-      <option name="program" value="$ProjectFileDir$/babel.cmd" />
+      <option name="program" value="$PROJECT_DIR$/babel.cmd" />
       <option name="scopeName" value="src" />
       <option name="trackOnlyRoot" value="true" />
       <option name="workingDir" value="$FileDir$" />

@@ -1,6 +1,10 @@
 {
   "presets": [
-    "es2015"
+    "es2015",
+    "stage-3"
   ],
-  "plugins": []
+  "plugins": ["transform-decorators"],
+  "ignore": [
+    "node_modules/*.js"
+  ]
 }
